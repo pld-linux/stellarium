@@ -38,7 +38,7 @@ like ground, landscape, fog, etc. Main features:
 %description -l pl
 Stellarium przy pomocy OpenGL-a oddaje w czasie rzeczywistym
 trójwymiarowe, realistyczne obrazy nieba. Wy¶wietla gwiazdy,
-konstelacje, planety, nebule i inne obiekty takie jak powierzchnia
+konstelacje, planety, mg³awice i inne obiekty takie jak powierzchnia
 ziemi, krajobrazy, mg³a, itp. G³ówne cechy to:
 - Ponad 120000 gwiazd z "Hipparcos Catalogue" z nazwami i opisem
   najja¶niejszych.
@@ -49,7 +49,7 @@ ziemi, krajobrazy, mg³a, itp. G³ówne cechy to:
 - Powierzchnia, mg³a i krajobraz.
 - Migotanie gwiazd.
 - Kontrola czasu (tryby czasu rzeczywistego i przy¶pieszonego).
-- Dostêp do informacji na temat gwiazd, planet i nebuli po ich
+- Dostêp do informacji na temat gwiazd, planet i mg³awic po ich
   klikniêciu.
 - P³ynna nawigacja w czasie rzeczywistym.
 - Tryb pracy pe³noekranowej i w oknie.
