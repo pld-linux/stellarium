@@ -7,7 +7,6 @@ License:	GPL v2
 Group:		X11/Applications/Science
 Source0:	http://dl.sourceforge.net/stellarium/%{name}-%{version}.tar.gz
 # Source0-md5:	f00e99b88f53273419683cf18905e39c
-# Source0-size:	9431913
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-autoconf.patch
