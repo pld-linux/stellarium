@@ -86,5 +86,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
 %{_desktopdir}/%{name}.desktop
-%{_mandir}/man1/%{name}.1.*
+%{_mandir}/man1/%{name}.1*
 %{_pixmapsdir}/%{name}.png
