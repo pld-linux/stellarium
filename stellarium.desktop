@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Stellarium
+Comment=Realistic sky generator
+Comment[pl]=Realistyczny generator obrazu nieba
+Icon=stellarium.png
+Exec=stellarium
+Terminal=false
+Type=Application
+# vi: encoding=utf-8
