@@ -1,15 +1,15 @@
 Summary:	Realistic sky generator
 Summary(pl):	Realistyczny generator obrazu nieba
 Name:		stellarium
-Version:	0.5.2
+Version:	0.6.0
 Release:	1
 License:	GPL v2
 Group:		X11/Applications/Science
 Source0:	http://dl.sourceforge.net/stellarium/%{name}-%{version}.tar.gz
-# Source0-md5:	3765a5ba8cb0e328ccccc282e21c875e
+# Source0-md5:	820a9246cb8c17c1ef6361100984ccbe
 Source1:	%{name}.desktop
 Source2:	%{name}.png
-Patch0:		%{name}-etc.patch
+Patch0:		%{name}-autoconf.patch
 URL:		http://stellarium.free.fr/
 BuildRequires:	OpenGL-devel
 BuildRequires:	SDL-devel >= 1.2
@@ -69,14 +69,10 @@ ziemi, krajobrazy, mg³a, itp. G³ówne cechy to:
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_sysconfdir}/X11/%{name}}
-install -d $RPM_BUILD_ROOT%{_pixmapsdir}
+install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
-
-mv -f $RPM_BUILD_ROOT%{_datadir}/%{name}/config/* \
-	$RPM_BUILD_ROOT%{_sysconfdir}/X11/%{name}
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
@@ -88,7 +84,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README TODO
 %attr(755,root,root) %{_bindir}/*
-%config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/X11/%{name}
 %{_datadir}/%{name}
 %{_desktopdir}/%{name}.desktop
+%{_mandir}/man1/%{name}.1.*
 %{_pixmapsdir}/%{name}.png
