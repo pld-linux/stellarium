@@ -11,10 +11,11 @@ Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-etc.patch
 URL:		http://stellarium.free.fr/
-BuildRequires:	SDL-devel >= 1.2
 BuildRequires:	OpenGL-devel
+BuildRequires:	SDL-devel >= 1.2
 BuildRequires:	autoconf
 BuildRequires:	automake
+Requires:	OpenGL
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -35,7 +36,7 @@ like ground, landscape, fog, etc. Main features:
 - Windowed and fullscreen modes.
 
 %description -l pl
-Stellarium przy pomocy OpenGLa oddaje w czasie rzeczywistym
+Stellarium przy pomocy OpenGL-a oddaje w czasie rzeczywistym
 trójwymiarowe, realistyczne obrazy nieba. Wy¶wietla gwiazdy,
 konstelacje, planety, nebule i inne objekty takie jak powierzchnia
 ziemi, krajobrazy, mg³a, itp. G³ówne cechy to:
@@ -48,7 +49,7 @@ ziemi, krajobrazy, mg³a, itp. G³ówne cechy to:
 - Powierzchnia, mg³a i krajobraz.
 - Migotanie gwiazd.
 - Kontrola czasu (tryby czasu rzeczywistego i przy¶pieszonego).
-- Dostêp do informacj na temat gwiazd, planet i nebuli po ich
+- Dostêp do informacji na temat gwiazd, planet i nebuli po ich
   klikniêciu.
 - P³ynna nawigacja w czasie rzeczywistym.
 - Tryb pracy pe³noekranowej i w oknie.
