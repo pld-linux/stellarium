@@ -38,13 +38,13 @@ like ground, landscape, fog, etc. Main features:
 %description -l pl
 Stellarium przy pomocy OpenGL-a oddaje w czasie rzeczywistym
 trójwymiarowe, realistyczne obrazy nieba. Wy¶wietla gwiazdy,
-konstelacje, planety, nebule i inne objekty takie jak powierzchnia
+konstelacje, planety, nebule i inne obiekty takie jak powierzchnia
 ziemi, krajobrazy, mg³a, itp. G³ówne cechy to:
 - Ponad 120000 gwiazd z "Hipparcos Catalogue" z nazwami i opisem
   najja¶niejszych.
 - Planety w czasie rzeczywistym z mo¿liwo¶ci± du¿ego powiêkszania.
 - Wy¶wietlanie 88 konstelacji wraz z ich nazwami.
-- Ponad 40 objektów messiera (Orion, M31, itp...).
+- Ponad 40 obiektów messiera (Orion, M31, itp...).
 - Realistyczna Droga Mleczna.
 - Powierzchnia, mg³a i krajobraz.
 - Migotanie gwiazd.
