@@ -1,11 +1,13 @@
---- stellarium-0.6.0/configure.in.orig	2004-06-02 21:06:29.260949472 +0200
-+++ stellarium-0.6.0/configure.in	2004-06-02 21:07:03.491745600 +0200
-@@ -12,8 +12,6 @@
+--- stellarium-0.6.1/configure.in.orig	2004-10-17 20:59:34.000000000 +0200
++++ stellarium-0.6.1/configure.in	2004-10-17 20:59:47.000000000 +0200
+@@ -12,8 +12,8 @@
  AC_PROG_CC
  AC_PROG_CXX
  
 -CFLAGS=" -Wall -s -O3"
 -CXXFLAGS=" -Wall -s -O3"
- dnl CFLAGS=" -Wall"
- dnl CXXFLAGS=" -Wall"
- dnl CFLAGS=" -Wall -pg -02"
++#CFLAGS=" -Wall -s -O3"
++#CXXFLAGS=" -Wall -s -O3"
+ dnl CFLAGS=" -g -Wall"
+ dnl CXXFLAGS=" -g -Wall"
+ dnl CFLAGS=" -Wall -pg"
