@@ -7,4 +7,5 @@ Icon=stellarium.png
 Exec=stellarium
 Terminal=false
 Type=Application
+Categories=Science;Astronomy;
 # vi: encoding=utf-8
