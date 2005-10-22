@@ -1,20 +1,18 @@
 Summary:	Realistic sky generator
 Summary(pl):	Realistyczny generator obrazu nieba
 Name:		stellarium
-Version:	0.6.2
+Version:	0.7.1
 Release:	1
 License:	GPL v2
 Group:		X11/Applications/Science
 Source0:	http://dl.sourceforge.net/stellarium/%{name}-%{version}.tar.gz
-# Source0-md5:	f00e99b88f53273419683cf18905e39c
+# Source0-md5:	94cb47d20d31d5e0bba5d9e0189c331b
 Source1:	%{name}.desktop
 Source2:	%{name}.png
-Patch0:		%{name}-autoconf.patch
 URL:		http://stellarium.free.fr/
 BuildRequires:	OpenGL-devel
 BuildRequires:	SDL-devel >= 1.2
-BuildRequires:	autoconf
-BuildRequires:	automake
+BuildRequires:	SDL_mixer-devel >= 1.2
 Requires:	OpenGL
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -56,13 +54,8 @@ ziemi, krajobrazy, mg³a, itp. G³ówne cechy to:
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
-%{__aclocal}
-%{__autoconf}
-%{__autoheader}
-%{__automake}
 %configure \
 	--disable-sdltest
 %{__make}
@@ -77,10 +70,12 @@ install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
+%find_lang %{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README TODO
 %attr(755,root,root) %{_bindir}/*
