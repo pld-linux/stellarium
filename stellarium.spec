@@ -13,6 +13,7 @@ URL:		http://stellarium.free.fr/
 BuildRequires:	OpenGL-devel
 BuildRequires:	SDL-devel >= 1.2
 BuildRequires:	SDL_mixer-devel >= 1.2
+BuildRequires:	libpng-devel
 Requires:	OpenGL
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
