@@ -1,5 +1,5 @@
 Summary:	Realistic sky generator
-Summary(pl):	Realistyczny generator obrazu nieba
+Summary(pl.UTF-8):   Realistyczny generator obrazu nieba
 Name:		stellarium
 Version:	0.8.0
 Release:	1
@@ -34,24 +34,24 @@ like ground, landscape, fog, etc. Main features:
 - Smooth real time navigation.
 - Windowed and fullscreen modes.
 
-%description -l pl
+%description -l pl.UTF-8
 Stellarium przy pomocy OpenGL-a oddaje w czasie rzeczywistym
-trÛjwymiarowe, realistyczne obrazy nieba. Wy∂wietla gwiazdy,
-konstelacje, planety, mg≥awice i inne obiekty takie jak powierzchnia
-ziemi, krajobrazy, mg≥a, itp. G≥Ûwne cechy to:
+tr√≥jwymiarowe, realistyczne obrazy nieba. Wy≈õwietla gwiazdy,
+konstelacje, planety, mg≈Çawice i inne obiekty takie jak powierzchnia
+ziemi, krajobrazy, mg≈Ça, itp. G≈Ç√≥wne cechy to:
 - Ponad 120000 gwiazd z "Hipparcos Catalogue" z nazwami i opisem
-  najja∂niejszych.
-- Planety w czasie rzeczywistym z moøliwo∂ci± duøego powiÍkszania.
-- Wy∂wietlanie 88 konstelacji wraz z ich nazwami.
-- Ponad 40 obiektÛw messiera (Orion, M31, itp...).
+  najja≈õniejszych.
+- Planety w czasie rzeczywistym z mo≈ºliwo≈õciƒÖ du≈ºego powiƒôkszania.
+- Wy≈õwietlanie 88 konstelacji wraz z ich nazwami.
+- Ponad 40 obiekt√≥w messiera (Orion, M31, itp...).
 - Realistyczna Droga Mleczna.
-- Powierzchnia, mg≥a i krajobraz.
+- Powierzchnia, mg≈Ça i krajobraz.
 - Migotanie gwiazd.
-- Kontrola czasu (tryby czasu rzeczywistego i przy∂pieszonego).
-- DostÍp do informacji na temat gwiazd, planet i mg≥awic po ich
-  klikniÍciu.
-- P≥ynna nawigacja w czasie rzeczywistym.
-- Tryb pracy pe≥noekranowej i w oknie.
+- Kontrola czasu (tryby czasu rzeczywistego i przy≈õpieszonego).
+- Dostƒôp do informacji na temat gwiazd, planet i mg≈Çawic po ich
+  klikniƒôciu.
+- P≈Çynna nawigacja w czasie rzeczywistym.
+- Tryb pracy pe≈Çnoekranowej i w oknie.
 
 %prep
 %setup -q
