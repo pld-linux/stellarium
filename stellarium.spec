@@ -1,5 +1,5 @@
 Summary:	Realistic sky generator
-Summary(pl.UTF-8):   Realistyczny generator obrazu nieba
+Summary(pl.UTF-8):	Realistyczny generator obrazu nieba
 Name:		stellarium
 Version:	0.8.0
 Release:	1
