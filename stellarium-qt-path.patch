@@ -1,0 +1,12 @@
+diff -ruN stellarium-0.9.0./configure.ac stellarium-0.9.0/configure.ac
+--- stellarium-0.9.0./configure.ac	2007-06-22 17:36:23.000000000 +0200
++++ stellarium-0.9.0/configure.ac	2007-06-22 17:42:05.619722258 +0200
+@@ -176,7 +176,7 @@
+     AC_MSG_NOTICE(I'm assuming this is Linux)
+     AC_PATH_XTRA
+     QTLIBS="-Wl,-rpath,$QTDIR/lib -L$QTDIR/lib -lQtGui -lQtOpenGL -lQtCore $X_LIBS -lX11 -lXext -lXmu -lXt -lXi $X_EXTRA_LIBS -lGLU -lGL -lpthread"
+-    QTINC="-I$QTDIR/include -I$QTDIR/include/QtGui -I$QTDIR/include/QtCore -I$QTDIR/include/QtOpenGL $X_CFLAGS -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED"
++    QTINC="-I$QTDIR/include/qt4 -I$QTDIR/include/qt4/QtGui -I$QTDIR/include/qt4/QtCore -I$QTDIR/include/qt4/QtOpenGL $X_CFLAGS -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED"
+     QTBIN="$QTDIR/bin"
+     ;;
+ esac
