@@ -1,19 +1,32 @@
 Summary:	Realistic sky generator
 Summary(pl.UTF-8):	Realistyczny generator obrazu nieba
 Name:		stellarium
-Version:	0.8.2
+Version:	0.9.0
 Release:	1
 License:	GPL v2
 Group:		X11/Applications/Science
 Source0:	http://dl.sourceforge.net/stellarium/%{name}-%{version}.tar.gz
-# Source0-md5:	8f4bcfcf6ad74ab57f1a9fc4f3927527
+# Source0-md5:	781a5171705c72e4dd3d08c9b1e4c15c
 Source1:	%{name}.desktop
 Source2:	%{name}.png
+Source3:	http://dl.sourceforge.net/stellarium/%{name}_user_guide-%{version}-1.pdf
+# Source3-md5:	13370d7553538a803d181b1d3ac13d0e
+Patch0:		%{name}-moc.patch
+Patch1:		%{name}-qt-path.patch
 URL:		http://www.stellarium.org/
 BuildRequires:	OpenGL-devel
-BuildRequires:	SDL-devel >= 1.2
+BuildRequires:	QtGui-devel
+BuildRequires:	QtOpenGL-devel
 BuildRequires:	SDL_mixer-devel >= 1.2
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	curl-devel
+BuildRequires:	freetype-devel
+BuildRequires:	gettext-devel
+BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
+BuildRequires:	libpng-devel
+BuildRequires:	libtool
 Requires:	OpenGL
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -55,10 +68,23 @@ ziemi, krajobrazy, mgła, itp. Główne cechy to:
 
 %prep
 %setup -q
+%patch0 -p1
+%patch1 -p1
+
+install %{SOURCE3} .
 
 %build
+%{__gettextize}
+%{__libtoolize}
+%{__aclocal} -I m4
+%{__autoconf}
+%{__autoheader}
+%{__automake}
+
 %configure \
-	--disable-sdltest
+	--disable-sdltest \
+	--with-qt42 \
+	--with-qt-dir=/usr
 %{__make}
 
 %install
@@ -78,7 +104,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README TODO
+%doc AUTHORS ChangeLog NEWS README TODO %{name}_user_guide-%{version}-1.pdf
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
 %{_desktopdir}/%{name}.desktop
