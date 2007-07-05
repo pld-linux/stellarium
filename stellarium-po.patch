@@ -1,0 +1,12 @@
+--- stellarium-0.9.0/po/CMakeLists.txt.old	2007-07-05 09:16:22.000000000 +0200
++++ stellarium-0.9.0/po/CMakeLists.txt	2007-07-05 09:16:46.000000000 +0200
+@@ -1,2 +1,2 @@
+ INCLUDE(${PROJECT_SOURCE_DIR}/cmake/FindGettext.cmake)
+-GETTEXT_CREATE_TRANSLATIONS(stellarium.pot ALL ar.po  bg.po  cs.po  de.po  en_GB.po  es.po  fa.po  fr.po  hr.po  hw.po  it.po  kn.po  lv.po  nb.po  nn.po  pt_BR.po  ro.po  sk.po  sr.po  tr.po  vi.po zh_HK.po az.po  ca.po  da.po  el.po  en.po     et.po  fi.po  ga.po  hu.po  id.po  ja.po  ko.po  mt.po  nl.po  pl.po  pt.po     ru.po  sl.po  sv.po  uk.po  zh_CN.po  zh_TW.po)
+\ Brak znaku nowej linii na koñcu pliku
++GETTEXT_CREATE_TRANSLATIONS(stellarium.pot ALL ar.po  bg.po  cs.po  de.po  en_GB.po  es.po  fa.po  fr.po  hr.po  it.po  kn.po  lv.po  nb.po  nn.po  pt_BR.po  ro.po  sk.po  sr.po  tr.po  vi.po zh_HK.po az.po  ca.po  da.po  el.po  en.po     et.po  fi.po  ga.po  hu.po  id.po  ja.po  ko.po  mt.po  nl.po  pl.po  pt.po     ru.po  sl.po  sv.po  uk.po  zh_CN.po  zh_TW.po)
+--- stellarium-0.9.0/po/LINGUAS~	2007-06-06 10:25:18.000000000 +0200
++++ stellarium-0.9.0/po/LINGUAS	2007-07-05 09:56:19.000000000 +0200
+@@ -1 +1 @@
+-ca da en_GB es fa fr hw hu ja lv nl pt pt_BR ro zh_CN zh_TW zh_HK cs de en fi it ko nb nn pl ru tr uk sk ga sv el az id 
++ca da en_GB es fa fr hu ja lv nl pt pt_BR ro zh_CN zh_TW zh_HK cs de en fi it ko nb nn pl ru tr uk sk ga sv el az id 
