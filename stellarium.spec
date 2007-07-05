@@ -2,7 +2,7 @@ Summary:	Realistic sky generator
 Summary(pl.UTF-8):	Realistyczny generator obrazu nieba
 Name:		stellarium
 Version:	0.9.0
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		X11/Applications/Science
 Source0:	http://dl.sourceforge.net/stellarium/%{name}-%{version}.tar.gz
@@ -13,6 +13,7 @@ Source3:	http://dl.sourceforge.net/stellarium/%{name}_user_guide-%{version}-1.pd
 # Source3-md5:	13370d7553538a803d181b1d3ac13d0e
 Patch0:		%{name}-moc.patch
 Patch1:		%{name}-qt-path.patch
+Patch2:		%{name}-po.patch
 URL:		http://www.stellarium.org/
 BuildRequires:	OpenGL-devel
 BuildRequires:	QtGui-devel
@@ -70,6 +71,8 @@ ziemi, krajobrazy, mgła, itp. Główne cechy to:
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
+rm po/hw.po
 
 install %{SOURCE3} .
 
