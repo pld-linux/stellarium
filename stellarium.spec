@@ -28,7 +28,6 @@ BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	libpng-devel
 BuildRequires:	libtool
-Requires:	OpenGL
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -72,6 +71,7 @@ ziemi, krajobrazy, mgła, itp. Główne cechy to:
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+# bogus "Hawaiian" translation (English with some quirks and empty strings)
 rm po/hw.po
 
 install %{SOURCE3} .
