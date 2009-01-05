@@ -1,12 +1,24 @@
---- stellarium-0.9.0/po/CMakeLists.txt.old	2007-07-05 09:16:22.000000000 +0200
-+++ stellarium-0.9.0/po/CMakeLists.txt	2007-07-05 09:16:46.000000000 +0200
-@@ -1,2 +1,2 @@
- INCLUDE(${PROJECT_SOURCE_DIR}/cmake/FindGettext.cmake)
--GETTEXT_CREATE_TRANSLATIONS(stellarium.pot ALL ar.po  bg.po  cs.po  de.po  en_GB.po  es.po  fa.po  fr.po  hr.po  hw.po  it.po  kn.po  lv.po  nb.po  nn.po  pt_BR.po  ro.po  sk.po  sr.po  tr.po  vi.po zh_HK.po az.po  ca.po  da.po  el.po  en.po     et.po  fi.po  ga.po  hu.po  id.po  ja.po  ko.po  mt.po  nl.po  pl.po  pt.po     ru.po  sl.po  sv.po  uk.po  zh_CN.po  zh_TW.po)
-\ Brak znaku nowej linii na koñcu pliku
-+GETTEXT_CREATE_TRANSLATIONS(stellarium.pot ALL ar.po  bg.po  cs.po  de.po  en_GB.po  es.po  fa.po  fr.po  hr.po  it.po  kn.po  lv.po  nb.po  nn.po  pt_BR.po  ro.po  sk.po  sr.po  tr.po  vi.po zh_HK.po az.po  ca.po  da.po  el.po  en.po     et.po  fi.po  ga.po  hu.po  id.po  ja.po  ko.po  mt.po  nl.po  pl.po  pt.po     ru.po  sl.po  sv.po  uk.po  zh_CN.po  zh_TW.po)
---- stellarium-0.9.0/po/LINGUAS~	2007-06-06 10:25:18.000000000 +0200
-+++ stellarium-0.9.0/po/LINGUAS	2007-07-05 09:56:19.000000000 +0200
-@@ -1 +1 @@
--ca da en_GB es fa fr hw hu ja lv nl pt pt_BR ro zh_CN zh_TW zh_HK cs de en fi it ko nb nn pl ru tr uk sk ga sv el az id 
-+ca da en_GB es fa fr hu ja lv nl pt pt_BR ro zh_CN zh_TW zh_HK cs de en fi it ko nb nn pl ru tr uk sk ga sv el az id 
+diff -dur -x '*~' stellarium-0.10.0.orig/po/stellarium/CMakeLists.txt stellarium-0.10.0/po/stellarium/CMakeLists.txt
+--- stellarium-0.10.0.orig/po/stellarium/CMakeLists.txt	2008-09-22 15:43:03.000000000 +0200
++++ stellarium-0.10.0/po/stellarium/CMakeLists.txt	2009-01-04 14:18:40.000000000 +0100
+@@ -2,7 +2,7 @@
+ SET(stellarium_POT ${stellarium_DOMAIN}.pot)
+ 
+ GETTEXT_CREATE_TRANSLATIONS(${stellarium_DOMAIN} DEFAULT_TARGET
+-    af ar az be bg bn ca cs cy da de el en_AU en_CA en_GB en eo es et eu fa fil fi fr fy ga gl haw he hr hu hy ia id is it ja ka kn ko lt lv mk ml ms mt nb nl nn pl pt_BR pt ro ru se sk sl sr sv te th tl tr uk vi zh_CN zh_HK zh_TW
++    af ar az be bg bn ca cs cy da de el en_AU en_CA en_GB en eo es et eu fa fi fr fy ga gl he hr hu hy ia id is it ja ka kn ko lt lv mk ml ms mt nb nl nn pl pt_BR pt ro ru se sk sl sr sv te th tl tr uk vi zh_CN zh_HK zh_TW
+ )
+ 
+ ADD_CUSTOM_TARGET(
+diff -dur -x '*~' stellarium-0.10.0.orig/po/stellarium-skycultures/CMakeLists.txt stellarium-0.10.0/po/stellarium-skycultures/CMakeLists.txt
+--- stellarium-0.10.0.orig/po/stellarium-skycultures/CMakeLists.txt	2008-09-22 15:43:03.000000000 +0200
++++ stellarium-0.10.0/po/stellarium-skycultures/CMakeLists.txt	2009-01-04 14:18:52.000000000 +0100
+@@ -2,7 +2,7 @@
+ SET(skycultures_POT ${skycultures_DOMAIN}.pot)
+ 
+ GETTEXT_CREATE_TRANSLATIONS(${skycultures_DOMAIN} DEFAULT_TARGET
+-    af ar az be bg bn ca cs cy da de el en_AU en_CA en_GB en eo es et eu fa fil fi fr ga gl gu haw he hr hu hy id is it ja ka kn ko lt lv mk ml ms mt nb nl nn pl pt_BR pt ro ru se sk sl sr sv te th tl tr uk vi zh_CN zh_HK zh_TW
++    af ar az be bg bn ca cs cy da de el en_AU en_CA en_GB en eo es et eu fa fi fr ga gl gu he hr hu hy id is it ja ka kn ko lt lv mk ml ms mt nb nl nn pl pt_BR pt ro ru se sk sl sr sv te th tl tr uk vi zh_CN zh_HK zh_TW
+ )
+ 
+ ADD_CUSTOM_TARGET(
