@@ -19,6 +19,7 @@ BuildRequires:	QtGui-devel
 BuildRequires:	QtOpenGL-devel
 BuildRequires:	QtScript-devel
 BuildRequires:	SDL_mixer-devel >= 1.2
+BuildRequires:	boost-devel
 BuildRequires:	cmake
 BuildRequires:	curl-devel
 BuildRequires:	freetype-devel
