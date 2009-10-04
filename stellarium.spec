@@ -1,17 +1,17 @@
-%define guide_version 0.9.1-1
+%define guide_version 0.10.2-1
 Summary:	Realistic sky generator
 Summary(pl.UTF-8):	Realistyczny generator obrazu nieba
 Name:		stellarium
-Version:	0.10.0
-Release:	3
+Version:	0.10.2
+Release:	1
 License:	GPL v2
 Group:		X11/Applications/Science
-Source0:	http://dl.sourceforge.net/stellarium/%{name}-%{version}.tgz
-# Source0-md5:	09465fa11a8caab7a4410f1e5ff6eb8c
+Source0:	http://dl.sourceforge.net/stellarium/%{name}-%{version}.tar.gz
+# Source0-md5:	c544fff9e75e9317055075b658ae5924
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Source3:	http://dl.sourceforge.net/stellarium/%{name}_user_guide-%{guide_version}.pdf
-# Source3-md5:	0e708c4c0af77712c64b22cbfa398fb4
+# Source3-md5:	8da17ee33510f57cbfdb321d8ae43c59
 Patch0:		%{name}-po.patch
 URL:		http://www.stellarium.org/
 BuildRequires:	OpenGL-devel
