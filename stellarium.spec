@@ -16,6 +16,7 @@ Patch0:		%{name}-po.patch
 URL:		http://www.stellarium.org/
 BuildRequires:	OpenGL-devel
 BuildRequires:	QtGui-devel
+BuildRequires:	QtNetwork-devel
 BuildRequires:	QtOpenGL-devel
 BuildRequires:	QtScript-devel
 BuildRequires:	SDL_mixer-devel >= 1.2
@@ -27,6 +28,9 @@ BuildRequires:	gettext-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	libpng-devel
+BuildRequires:	perl-tools-pod
+BuildRequires:	qt4-build
+BuildRequires:	qt4-qmake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -75,8 +79,8 @@ install %{SOURCE3} .
 
 %build
 %cmake \
-        -DCMAKE_INSTALL_PREFIX=%{_prefix} \
-        .
+		-DCMAKE_INSTALL_PREFIX=%{_prefix} \
+		.
 
 %install
 rm -rf $RPM_BUILD_ROOT
