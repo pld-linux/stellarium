@@ -3,7 +3,7 @@ Summary:	Realistic sky generator
 Summary(pl.UTF-8):	Realistyczny generator obrazu nieba
 Name:		stellarium
 Version:	0.10.2
-Release:	2
+Release:	3
 License:	GPL v2
 Group:		X11/Applications/Science
 Source0:	http://dl.sourceforge.net/stellarium/%{name}-%{version}.tar.gz
@@ -13,6 +13,7 @@ Source2:	%{name}.png
 Source3:	http://dl.sourceforge.net/stellarium/%{name}_user_guide-%{guide_version}.pdf
 # Source3-md5:	8da17ee33510f57cbfdb321d8ae43c59
 Patch0:		%{name}-po.patch
+Patch1:		%{name}-libpng.patch
 URL:		http://www.stellarium.org/
 BuildRequires:	OpenGL-devel
 BuildRequires:	QtGui-devel
@@ -25,7 +26,7 @@ BuildRequires:	curl-devel
 BuildRequires:	freetype-devel
 BuildRequires:	gettext-devel
 BuildRequires:	libjpeg-devel
-BuildRequires:	libpng-devel
+BuildRequires:	libpng-devel >= 2:1.2.0
 BuildRequires:	libpng-devel
 BuildRequires:	perl-tools-pod
 BuildRequires:	qt4-build
@@ -71,6 +72,7 @@ ziemi, krajobrazy, mgła, itp. Główne cechy to:
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 # bogus "Hawaiian" translation (English with some quirks and empty strings)
 rm po/*/{haw,fil}.po
 
