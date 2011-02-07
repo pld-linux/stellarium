@@ -2,18 +2,16 @@
 Summary:	Realistic sky generator
 Summary(pl.UTF-8):	Realistyczny generator obrazu nieba
 Name:		stellarium
-Version:	0.10.2
-Release:	3
+Version:	0.10.6
+Release:	1
 License:	GPL v2
 Group:		X11/Applications/Science
 Source0:	http://dl.sourceforge.net/stellarium/%{name}-%{version}.tar.gz
-# Source0-md5:	c544fff9e75e9317055075b658ae5924
+# Source0-md5:	daab49529f0ad76efe871b639ac79295
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Source3:	http://dl.sourceforge.net/stellarium/%{name}_user_guide-%{guide_version}.pdf
 # Source3-md5:	8da17ee33510f57cbfdb321d8ae43c59
-Patch0:		%{name}-po.patch
-Patch1:		%{name}-libpng.patch
 URL:		http://www.stellarium.org/
 BuildRequires:	OpenGL-devel
 BuildRequires:	QtGui-devel
@@ -71,10 +69,6 @@ ziemi, krajobrazy, mgła, itp. Główne cechy to:
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
-# bogus "Hawaiian" translation (English with some quirks and empty strings)
-rm po/*/{haw,fil}.po
 
 install %{SOURCE3} .
 
@@ -92,6 +86,8 @@ install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
+
+rm -r $RPM_BUILD_ROOT%{_localedir}/{fil,haw,hrx,sco}
 
 %find_lang %{name} --all-name
 
