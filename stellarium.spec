@@ -6,11 +6,11 @@ Version:	0.10.6
 Release:	1
 License:	GPL v2
 Group:		X11/Applications/Science
-Source0:	http://dl.sourceforge.net/stellarium/%{name}-%{version}.tar.gz
+Source0:	http://downloads.sourceforge.net/stellarium/%{name}-%{version}.tar.gz
 # Source0-md5:	daab49529f0ad76efe871b639ac79295
 Source1:	%{name}.desktop
 Source2:	%{name}.png
-Source3:	http://dl.sourceforge.net/stellarium/%{name}_user_guide-%{guide_version}.pdf
+Source3:	http://downloads.sourceforge.net/stellarium/%{name}_user_guide-%{guide_version}.pdf
 # Source3-md5:	8da17ee33510f57cbfdb321d8ae43c59
 URL:		http://www.stellarium.org/
 BuildRequires:	OpenGL-devel
@@ -18,14 +18,15 @@ BuildRequires:	QtGui-devel
 BuildRequires:	QtNetwork-devel
 BuildRequires:	QtOpenGL-devel
 BuildRequires:	QtScript-devel
+BuildRequires:	QtTest-devel
 BuildRequires:	boost-devel
 BuildRequires:	cmake
 BuildRequires:	curl-devel
 BuildRequires:	freetype-devel
 BuildRequires:	gettext-devel
 BuildRequires:	libjpeg-devel
-BuildRequires:	libpng-devel >= 2:1.2.0
 BuildRequires:	libpng-devel
+BuildRequires:	libpng-devel >= 2:1.2.0
 BuildRequires:	perl-tools-pod
 BuildRequires:	qt4-build
 BuildRequires:	qt4-qmake
