@@ -23,7 +23,7 @@ BuildRequires:	boost-devel
 BuildRequires:	cmake
 BuildRequires:	curl-devel
 BuildRequires:	freetype-devel
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	libpng-devel >= 2:1.2.0
