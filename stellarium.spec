@@ -32,6 +32,7 @@ BuildRequires:	perl-tools-pod
 BuildRequires:	qt5-build
 BuildRequires:	qt5-linguist
 BuildRequires:	qt5-qmake
+Requires:	Qt5Gui-platform-xcb-glx
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
