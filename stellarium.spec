@@ -3,7 +3,7 @@ Summary:	Realistic sky generator
 Summary(pl.UTF-8):	Realistyczny generator obrazu nieba
 Name:		stellarium
 Version:	0.14.1
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		X11/Applications/Science
 Source0:	http://downloads.sourceforge.net/stellarium/%{name}-%{version}.tar.gz
@@ -17,8 +17,8 @@ BuildRequires:	Qt5Declarative-devel
 BuildRequires:	Qt5Gui-devel
 BuildRequires:	Qt5Network-devel
 BuildRequires:	Qt5OpenGL-devel
-BuildRequires:	Qt5SerialPort-devel
 BuildRequires:	Qt5Script-devel
+BuildRequires:	Qt5SerialPort-devel
 BuildRequires:	Qt5Test-devel
 BuildRequires:	boost-devel
 BuildRequires:	cmake
@@ -32,6 +32,7 @@ BuildRequires:	perl-tools-pod
 BuildRequires:	qt5-build
 BuildRequires:	qt5-linguist
 BuildRequires:	qt5-qmake
+Requires:	%{name}-data = %{version}-%{release}
 Requires:	Qt5Gui-platform-xcb-glx
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -71,6 +72,17 @@ ziemi, krajobrazy, mgła, itp. Główne cechy to:
 - Płynna nawigacja w czasie rzeczywistym.
 - Tryb pracy pełnoekranowej i w oknie.
 
+%package data
+Summary:	Stellarium data files
+Group:		Applications/Games
+Group:		X11/Applications/Science
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description data
+Stellarium data files
+
 %prep
 %setup -q
 
@@ -100,6 +112,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/%{name}.1*
 %{_pixmapsdir}/%{name}.xpm
 %{_iconsdir}/*/*/apps/stellarium.png
+
+%files data
+%defattr(644,root,root,755)
 %dir %{_datadir}/%{name}
 %{_datadir}/%{name}/data
 %{_datadir}/%{name}/landscapes
