@@ -74,7 +74,6 @@ ziemi, krajobrazy, mgła, itp. Główne cechy to:
 
 %package data
 Summary:	Stellarium data files
-Group:		Applications/Games
 Group:		X11/Applications/Science
 %if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
