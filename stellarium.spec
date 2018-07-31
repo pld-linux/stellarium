@@ -39,8 +39,6 @@ Requires:	%{name}-data = %{version}-%{release}
 Requires:	Qt5Gui-platform-xcb-glx
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_noautoreq	libstelMain.so.*
-
 %description
 Stellarium renders 3D realistic skies in real time with OpenGL. It
 displays stars, constellations, planets, nebulas and others things
@@ -94,8 +92,9 @@ install %{SOURCE1} .
 
 %build
 %cmake \
-		-DCMAKE_INSTALL_PREFIX=%{_prefix} \
-		.
+	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
+	-DBUILD_SHARED_LIBS=OFF \
+	.
 
 %install
 rm -rf $RPM_BUILD_ROOT
