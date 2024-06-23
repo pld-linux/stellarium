@@ -34,7 +34,7 @@ BuildRequires:	cmake >= 3.10.0
 BuildRequires:	doxygen
 BuildRequires:	gettext-tools
 # API version >= 6.0
-BuildRequires:	gpsd-devel >= 3
+BuildRequires:	gpsd-devel >= 3.12
 BuildRequires:	libstdc++-devel >= 6:7
 # pod2man
 BuildRequires:	perl-tools-pod
